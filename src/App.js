@@ -1,5 +1,4 @@
 import React from "react";
-import Form from "./components/Form";
 import Locations from "./components/Locations";
 import DataOfHalfDay from "./components/DataOfHalfDay";
 import { WEEK_DAYS, MONTHS } from "./constants/constants";

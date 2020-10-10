@@ -1,5 +1,6 @@
 import React from "react";
 import NextDayComponent from "./NextDayComponent";
+import ParameterOfDayComponent from "./ParameterOfDayComponent";
 
 class DataOfHalfDay extends React.Component {
   render() {
@@ -38,72 +39,36 @@ class DataOfHalfDay extends React.Component {
                   <img src="./images/term-down.svg" alt="aroow down" />
                 </p>
               </div>
-              <div className="data__humidity night-main__item">
-                <img
-                  src="./images/humidity.svg"
-                  alt="humidity"
-                  className="item__image humidity__image"
-                />
-                <p className="something__value humidity__value">
-                  {this.props.humidity}%
-                </p>
-                <p className="something__title humidity__title">Humidity</p>
-              </div>
-              <div className="data__pressure night-main__item">
-                <img
-                  src="./images/pressure.svg"
-                  alt="pressure"
-                  className="item__image pressure__image"
-                />
-                <p className="something__value pressure__value">
-                  {this.props.pressure}mBar
-                </p>
-                <p className="something__title pressure__title">Pressure</p>
-              </div>
-              <div className="data__wind night-main__item">
-                <img
-                  src="./images/wind.svg"
-                  alt="wind"
-                  className="item__image wind__image"
-                />
-                <p className="something__value wind__value">
-                  {this.props.wind}km/h
-                </p>
-                <p className="something__title wind__title">Wind</p>
-              </div>
-              <div className="data__sunrise night-main__item">
-                <img
-                  src="./images/sunrise.svg"
-                  alt="sunrise"
-                  className="item__image sunrise__image"
-                />
-                <p className="something__value sunrise__value">
-                  {this.props.sunrise} AM
-                </p>
-                <p className="something__title sunrise__title">Sunrise</p>
-              </div>
-              <div className="data__sunset night-main__item">
-                <img
-                  src="./images/sunset.svg"
-                  alt="sunset"
-                  className="item__image sunset__image"
-                />
-                <p className="something__value sunset__value">
-                  {this.props.sunset} PM
-                </p>
-                <p className="something__title sunset__title">Sunset</p>
-              </div>
-              <div className="data__daytime night-main__item">
-                <img
-                  src="./images/daytime.svg"
-                  alt="daytime"
-                  className="item__image daytime__image"
-                />
-                <p className="something__value daytime__value">
-                  {this.props.daytime}
-                </p>
-                <p className="something__title daytime__title">Daytime</p>
-              </div>
+              <ParameterOfDayComponent
+                image={"./images/humidity.svg"}
+                value={this.props.humidity + "%"}
+                title={"Humidity"}
+              />
+              <ParameterOfDayComponent
+                image={"./images/pressure.svg"}
+                value={this.props.pressure + "mBar"}
+                title={"Pressure"}
+              />
+              <ParameterOfDayComponent
+                image={"./images/wind.svg"}
+                value={this.props.wind + " km/h"}
+                title={"Wind"}
+              />
+              <ParameterOfDayComponent
+                image={"./images/sunrise.svg"}
+                value={this.props.sunrise + ' AM'}
+                title={"Sunrise"}
+              />
+              <ParameterOfDayComponent
+                image={"./images/sunset.svg"}
+                value={this.props.sunset + ' PM'}
+                title={"Sunset"}
+              />
+              <ParameterOfDayComponent
+                image={"./images/daytime.svg"}
+                value={this.props.daytime}
+                title={"Daytime"}
+              />
               <NextDayComponent
                 date_day_next={this.props.date_day_next1}
                 temp_day_max={this.props.temp_day2_max}
