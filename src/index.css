@@ -29,7 +29,7 @@ code {
   align-items: flex-start;
   width: 375px;
   margin: 30px auto;
-  background-color: yellow;
+  background-color: white;
   padding: 0px;
   border-radius: 10px;
 }
@@ -168,6 +168,8 @@ code {
   letter-spacing: -0.05em;
   color: #444444;
   cursor: pointer;
+  border: 0px;
+  background: transparent;
 }
 
 .list-item__town:active {
@@ -228,6 +230,7 @@ code {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-sizing: border-box;
+  z-index: 10;
 }
 
 .night-top {
@@ -236,6 +239,7 @@ code {
   flex-direction: space-between;
   align-items: center;
   width: 100%;
+  margin-top: 20px;
 }
 
 .night-top__time {
@@ -249,11 +253,13 @@ code {
   color: #999999;
 }
 
-.night-top__place {
+.night-top__place,
+.day-top__place {
   position: relative;
   display: block;
   justify-self: flex-end;
-  margin-left: 45px;
+  width: 110px;
+  margin-left: 40px;
   padding-right: 15px;
   font-family: Barlow;
   font-style: normal;
@@ -262,6 +268,7 @@ code {
   line-height: 19px;
   text-align: right;
   color: #0da0ea;
+  box-sizing: border-box;
 }
 
 .night-top__place:before {
@@ -288,27 +295,23 @@ code {
   padding: 10px 0;
 }
 
-.data__cloudly {
-  width: 49px;
-  height: 71px;
-}
 
-.data__cloudly img {
+.data__cloudly img,
+.data__weather img {
   display: block;
-  width: 40px;
-  height: 30px;
-  margin-left: 10px;
-  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
 }
 
-.cloudly__text {
+.weather__text {
   display: block;
   width: 19px;
   height: 22px;
   margin: 0 auto;
   margin-top: 5px;
+  margin-left: 20px;
   padding: 0;
-  margin-left: 5px;
   font-family: Barlow;
   font-style: normal;
   font-weight: 500;
@@ -319,10 +322,12 @@ code {
   color: #000000;
 }
 
+
 .data__temperature {
   width: 64px;
   height: 77px;
   margin: 0;
+  margin-left: 10px;
   font-family: Barlow;
   font-style: normal;
   font-weight: 300;
@@ -330,6 +335,7 @@ code {
   line-height: 77px;
   letter-spacing: -0.05em;
   color: #000000;
+  text-align: center;
 }
 
 .data__temperature-sup {
@@ -421,4 +427,9 @@ code {
 
 .day-graphic {
   background-image: url('./images/graphic-day.svg');
+}
+
+.day-main .weather__text {
+  display: block;
+  margin-left: 25px;
 }
