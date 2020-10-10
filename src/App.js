@@ -1,86 +1,73 @@
 import React from "react";
 import Form from "./components/Form";
+import Locations from "./components/Locations";
+import DataOfHalfDay from "./components/DataOfHalfDay";
+import { WEEK_DAYS, MONTHS } from "./constants/constants";
 
 const API_KEY = "2dd62d48ced57a57cb21a5da5ee706fe";
-const WEEK_DAYS = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-  "Monday",
-  "Tuesday",
-];
-const MONTHS = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
 
 class App extends React.Component {
-  state = {
-    temp: undefined,
-    temp_day: undefined,
-    temp_night: undefined,
-    temp_min: undefined,
-    temp_max: undefined,
-    daytime: undefined,
-    city: undefined,
-    country: undefined,
-    weather: undefined,
-    weather_night: undefined,
-    sunset: undefined,
-    sunrise: undefined,
-    error: undefined,
-    humidity: undefined,
-    pressure: undefined,
-    wind: undefined,
-    humidity_night: undefined,
-    pressure_night: undefined,
-    wind_night: undefined,
-    cityList: [],
-    date_now: undefined,
-    date_now_night: undefined,
-    date_day2: undefined,
-    date_day3: undefined,
-    date_day4: undefined,
-    temp_day2_min: undefined,
-    temp_day2_max: undefined,
-    temp_day3_min: undefined,
-    temp_day3_max: undefined,
-    temp_day4_min: undefined,
-    temp_day4_max: undefined,
-    date_day_next1: undefined,
-    date_day_next2: undefined,
-    date_day_next3: undefined,
-    weather_icon: undefined,
-    weather_icon_night: undefined,
-  };
+  constructor(props) {
+    super(props);
+    let stateLocal = JSON.parse(localStorage.state);
+    this.state =
+      stateLocal !== ""
+        ? stateLocal
+        : {
+            city: undefined,
+            cityList: [],
+            country: undefined,
+            date_day2: undefined,
+            date_day3: undefined,
+            date_day4: undefined,
+            date_day_next1: undefined,
+            date_day_next2: undefined,
+            date_day_next3: undefined,
+            daytime: undefined,
+            date_now: undefined,
+            date_now_night: undefined,
+            error: undefined,
+            humidity: undefined,
+            humidity_night: undefined,
+            pressure: undefined,
+            pressure_night: undefined,
+            temp: undefined,
+            temp_day: undefined,
+            temp_night: undefined,
+            temp_min: undefined,
+            temp_max: undefined,
+            temp_day2_min: undefined,
+            temp_day2_max: undefined,
+            temp_day3_min: undefined,
+            temp_day3_max: undefined,
+            temp_day4_min: undefined,
+            temp_day4_max: undefined,
+            sunset: undefined,
+            sunrise: undefined,
+            wind: undefined,
+            wind_night: undefined,
+            weather: undefined,
+            weather_night: undefined,
+            weather_icon: undefined,
+            weather_icon_night: undefined,
+          };
+    this.deleteCityInList = this.deleteCityInList.bind(this);
+    this.getWeather = this.getWeather.bind(this);
+    this.getOneCityWeather = this.getOneCityWeather.bind(this);
+  }
 
   deleteCityInList = async (e) => {
     e.preventDefault();
     const ourElementNumber = e.target.value;
     let newCityList = [...this.state.cityList];
     newCityList.splice(ourElementNumber, 1);
-    for (let i=ourElementNumber; i<newCityList.length; i++) {
+    for (let i = ourElementNumber; i < newCityList.length; i++) {
       newCityList[i][0]--;
-    } 
-    console.log(newCityList);
+    }
     this.setState({
       cityList: [...newCityList],
     });
+    localStorage.state = JSON.stringify(this.state);
   };
 
   getWeather = async (e) => {
@@ -110,15 +97,18 @@ class App extends React.Component {
             ],
           ],
         });
+        localStorage.state = JSON.stringify(this.state);
       } else {
         this.setState({
           cityList: [...this.state.cityList],
         });
+        localStorage.state = JSON.stringify(this.state);
       }
     } else {
       this.setState({
         cityList: [...this.state.cityList],
       });
+      localStorage.state = JSON.stringify(this.state);
     }
   };
 
@@ -187,68 +177,50 @@ class App extends React.Component {
       let ourTime = new Date();
       if (!city) {
         this.setState({
+          city: undefined,
+          cityList: [...this.state.cityList],
+          country: undefined,
+          date_day2: undefined,
+          date_day3: undefined,
+          date_day4: undefined,
+          date_day_next1: undefined,
+          date_day_next2: undefined,
+          date_day_next3: undefined,
+          daytime: undefined,
+          date_now: new Date(),
+          date_now_night: undefined,
+          error: "Mistake! Please let's try again",
+          humidity: undefined,
+          humidity_night: undefined,
+          pressure: undefined,
+          pressure_night: undefined,
           temp: undefined,
           temp_day: undefined,
           temp_night: undefined,
           temp_min: undefined,
           temp_max: undefined,
-          city: undefined,
-          country: undefined,
-          weather: undefined,
-          weather_night: undefined,
-          sunset: undefined,
-          sunrise: undefined,
-          daytime: undefined,
-          error: "Mistake! Please let's try again",
-          humidity: undefined,
-          pressure: undefined,
-          wind: undefined,
-          humidity_night: undefined,
-          pressure_night: undefined,
-          wind_night: undefined,
-          cityList: [...this.state.cityList],
-          date_now: new Date(),
-          date_now_night: undefined,
-          date_day2: undefined,
-          date_day3: undefined,
-          date_day4: undefined,
           temp_day2_min: undefined,
           temp_day2_max: undefined,
           temp_day3_min: undefined,
           temp_day3_max: undefined,
           temp_day4_min: undefined,
           temp_day4_max: undefined,
-          date_day_next1: undefined,
-          date_day_next2: undefined,
-          date_day_next3: undefined,
+          sunset: undefined,
+          sunrise: undefined,
+          wind: undefined,
+          wind_night: undefined,
+          weather: undefined,
+          weather_night: undefined,
           weather_icon: undefined,
           weather_icon_night: undefined,
         });
+        localStorage.state = JSON.stringify(this.state);
       } else if (ourTime.getHours() >= 7 && ourTime.getHours() < 19) {
         //Значит день
         this.setState({
-          temp: Math.floor(data.main.temp),
-          temp_day: Math.floor(data2.daily[0].temp.day),
-          temp_night: Math.floor(data2.daily[0].temp.night),
-          temp_min: Math.floor(data2.daily[0].temp.min),
-          temp_max: Math.floor(data2.daily[0].temp.max),
           city: data.name,
-          country: data.sys.country,
-          weather: data2.hourly[0].weather[0].main,
-          weather_night: data2.hourly[12].weather[0].main,
-          sunset: sunsetDate,
-          sunrise: sunriseDate,
-          daytime: daytimeString,
-          error: "",
-          humidity: Math.floor(data.main.humidity),
-          pressure: Math.floor(data.main.pressure),
-          wind: Math.floor(data.wind.speed),
-          humidity_night: Math.floor(data2.hourly[12].humidity),
-          pressure_night: Math.floor(data2.hourly[12].pressure),
-          wind_night: Math.floor(data2.hourly[12].wind_speed),
           cityList: [...this.state.cityList],
-          date_now: date_now_const,
-          date_now_night: date_now_const_next,
+          country: data.sys.country,
           date_day2: `${dataSetDay2
             .getDay()
             .toString()}, ${dataSetDay2.getDate()} `,
@@ -258,58 +230,79 @@ class App extends React.Component {
           date_day4: `${dataSetDay4
             .getDay()
             .toString()}, ${dataSetDay4.getDate()} `,
+          date_day_next1: `${WEEK_DAYS[newDate.getDay() + 2]}`,
+          date_day_next2: `${WEEK_DAYS[newDate.getDay() + 3]}`,
+          date_day_next3: `${WEEK_DAYS[newDate.getDay() + 4]}`,
+          daytime: daytimeString,
+          date_now: date_now_const,
+          date_now_night: date_now_const_next,
+          error: "",
+          humidity: Math.floor(data.main.humidity),
+          humidity_night: Math.floor(data2.hourly[12].humidity),
+          pressure: Math.floor(data.main.pressure),
+          pressure_night: Math.floor(data2.hourly[12].pressure),
+          temp: Math.floor(data.main.temp),
+          temp_day: Math.floor(data2.daily[0].temp.day),
+          temp_night: Math.floor(data2.daily[0].temp.night),
+          temp_min: Math.floor(data2.daily[0].temp.min),
+          temp_max: Math.floor(data2.daily[0].temp.max),
           temp_day2_min: Math.floor(data2.daily[1].temp.min),
           temp_day2_max: Math.floor(data2.daily[1].temp.max),
           temp_day3_min: Math.floor(data2.daily[2].temp.min),
           temp_day3_max: Math.floor(data2.daily[2].temp.max),
           temp_day4_min: Math.floor(data2.daily[3].temp.min),
           temp_day4_max: Math.floor(data2.daily[3].temp.max),
-          date_day_next1: `${WEEK_DAYS[newDate.getDay() + 2]}`,
-          date_day_next2: `${WEEK_DAYS[newDate.getDay() + 3]}`,
-          date_day_next3: `${WEEK_DAYS[newDate.getDay() + 4]}`,
+          sunset: sunsetDate,
+          sunrise: sunriseDate,
+          wind: Math.floor(data.wind.speed),
+          wind_night: Math.floor(data2.hourly[12].wind_speed),
+          weather: data2.hourly[0].weather[0].main,
+          weather_night: data2.hourly[12].weather[0].main,
           weather_icon: data2.hourly[0].weather[0].icon,
           weather_icon_night: data2.hourly[12].weather[0].icon,
         });
+        localStorage.state = JSON.stringify(this.state);
       } else {
         //Значит ночь
         this.setState({
-          temp: Math.floor(data.main.temp),
-          temp_day: undefined,
-          temp_night: undefined,
-          temp_min: Math.floor(data.main.temp_min),
-          temp_max: Math.floor(data.main.temp_max),
           city: data.name,
-          country: data.sys.country,
-          weather: data2.hourly[12].weather[0].main,
-          weather_night: data2.hourly[0].weather[0].main,
-          sunset: sunsetDate,
-          sunrise: sunriseDate,
-          daytime: daytimeString,
-          error: "",
-          humidity: Math.floor(data2.hourly[12].humidity),
-          pressure: Math.floor(data2.hourly[12].pressure),
-          wind: Math.floor(data2.hourly[12].wind_speed),
-          humidity_night: Math.floor(data.main.humidity),
-          pressure_night: Math.floor(data.main.pressure),
-          wind_night: Math.floor(data.wind.speed),
           cityList: [...this.state.cityList],
-          date_now: date_now_const_next,
-          date_now_night: date_now_const,
+          country: data.sys.country,
           date_day2: `${dataSetDay2.getDay()}, ${dataSetDay2.getDate()} `,
           date_day3: `${dataSetDay3.getDay()}, ${dataSetDay3.getDate()} `,
           date_day4: `${dataSetDay4.getDay()}, ${dataSetDay4.getDate()} `,
+          date_day_next1: `${WEEK_DAYS[newDate.getDay() + 2]}`,
+          date_day_next2: `${WEEK_DAYS[newDate.getDay() + 3]}`,
+          date_day_next3: `${WEEK_DAYS[newDate.getDay() + 4]}`,
+          daytime: daytimeString,
+          date_now: date_now_const_next,
+          date_now_night: date_now_const,
+          error: "",
+          humidity: Math.floor(data2.hourly[12].humidity),
+          humidity_night: Math.floor(data.main.humidity),
+          pressure: Math.floor(data2.hourly[12].pressure),
+          pressure_night: Math.floor(data.main.pressure),
+          temp: Math.floor(data.main.temp),
+          temp_day: Math.floor(data2.daily[0].temp.day),
+          temp_night: Math.floor(data2.daily[0].temp.night),
+          temp_min: Math.floor(data.main.temp_min),
+          temp_max: Math.floor(data.main.temp_max),
           temp_day2_min: Math.floor(data2.daily[1].temp.min),
           temp_day2_max: Math.floor(data2.daily[1].temp.max),
           temp_day3_min: Math.floor(data2.daily[2].temp.min),
           temp_day3_max: Math.floor(data2.daily[2].temp.max),
           temp_day4_min: Math.floor(data2.daily[3].temp.min),
           temp_day4_max: Math.floor(data2.daily[3].temp.max),
-          date_day_next1: `${WEEK_DAYS[newDate.getDay() + 2]}`,
-          date_day_next2: `${WEEK_DAYS[newDate.getDay() + 3]}`,
-          date_day_next3: `${WEEK_DAYS[newDate.getDay() + 4]}`,
+          sunset: sunsetDate,
+          sunrise: sunriseDate,
+          wind: Math.floor(data2.hourly[12].wind_speed),
+          wind_night: Math.floor(data.wind.speed),
+          weather: data2.hourly[12].weather[0].main,
+          weather_night: data2.hourly[0].weather[0].main,
           weather_icon: data2.hourly[12].weather[0].icon,
           weather_icon_night: data2.hourly[0].weather[0].icon,
         });
+        localStorage.state = JSON.stringify(this.state);
       }
     }
   };
@@ -317,47 +310,76 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Form
-          weatherMethod={this.getWeather}
-          cityList={this.state.cityList}
-          deleteCityInList={this.deleteCityInList}
-          getOneCity={this.getOneCityWeather}
-          temp={this.state.temp}
-          temp_min={this.state.temp_min}
-          temp_max={this.state.temp_max}
-          city={this.state.city}
-          country={this.state.country}
-          weather={this.state.weather}
-          weather_night={this.state.weather_night}
-          sunset={this.state.sunset}
-          sunrise={this.state.sunrise}
-          error={this.state.error}
-          humidity={this.state.humidity}
-          pressure={this.state.pressure}
-          wind={this.state.wind}
-          humidity_night={this.state.humidity_night}
-          pressure_night={this.state.pressure_night}
-          wind_night={this.state.wind_night}
-          temp_day={this.state.temp_day}
-          temp_night={this.state.temp_night}
-          date_day2={this.state.date_day2}
-          temp_day2_min={this.state.temp_day2_min}
-          temp_day2_max={this.state.temp_day2_max}
-          date_day3={this.state.date_day3}
-          temp_day3_min={this.state.temp_day3_min}
-          temp_day3_max={this.state.temp_day3_max}
-          date_day4={this.state.date_day4}
-          temp_day4_min={this.state.temp_day4_min}
-          temp_day4_max={this.state.temp_day4_max}
-          daytime={this.state.daytime}
-          date_now={this.state.date_now}
-          date_now_night={this.state.date_now_night}
-          date_day_next1={this.state.date_day_next1}
-          date_day_next2={this.state.date_day_next2}
-          date_day_next3={this.state.date_day_next3}
-          weather_icon={this.state.weather_icon}
-          weather_icon_night={this.state.weather_icon_night}
-        />
+        <div className="main">
+          <Locations
+            cityList={this.state.cityList}
+            deleteCityInList={this.deleteCityInList}
+            getOneCity={this.getOneCityWeather}
+            weatherMethod={this.getWeather}
+          />
+          <DataOfHalfDay
+            city={this.state.city}
+            country={this.state.country}
+            date_day2={this.state.date_day2}
+            date_day3={this.state.date_day3}
+            date_day4={this.state.date_day4}
+            date_day_next1={this.state.date_day_next1}
+            date_day_next2={this.state.date_day_next2}
+            date_day_next3={this.state.date_day_next3}
+            daytime={this.state.daytime}
+            date_now={this.state.date_now_night}
+            error={this.state.error}
+            humidity={this.state.humidity_night}
+            picture={"./images/graphic-night.svg"}
+            pressure={this.state.pressure_night}
+            temp={this.state.temp}
+            temp_min={this.state.temp_min}
+            temp_max={this.state.temp_max}
+            temp_day2_min={this.state.temp_day2_min}
+            temp_day2_max={this.state.temp_day2_max}
+            temp_day3_min={this.state.temp_day3_min}
+            temp_day3_max={this.state.temp_day3_max}
+            temp_day4_min={this.state.temp_day4_min}
+            temp_day4_max={this.state.temp_day4_max}
+            temp_of_half_day={this.state.temp_night}
+            sunset={this.state.sunset}
+            sunrise={this.state.sunrise}
+            wind={this.state.wind_night}
+            weather={this.state.weather_night}
+            weather_icon={this.state.weather_icon_night}
+          />
+          <DataOfHalfDay
+            city={this.state.city}
+            country={this.state.country}
+            date_day2={this.state.date_day2}
+            date_day3={this.state.date_day3}
+            date_day4={this.state.date_day4}
+            date_day_next1={this.state.date_day_next1}
+            date_day_next2={this.state.date_day_next2}
+            date_day_next3={this.state.date_day_next3}
+            daytime={this.state.daytime}
+            date_now={this.state.date_now}
+            error={this.state.error}
+            humidity={this.state.humidity}
+            picture={"./images/graphic-day.svg"}
+            pressure={this.state.pressure}
+            temp={this.state.temp}
+            temp_min={this.state.temp_min}
+            temp_max={this.state.temp_max}
+            temp_day2_min={this.state.temp_day2_min}
+            temp_day2_max={this.state.temp_day2_max}
+            temp_day3_min={this.state.temp_day3_min}
+            temp_day3_max={this.state.temp_day3_max}
+            temp_day4_min={this.state.temp_day4_min}
+            temp_day4_max={this.state.temp_day4_max}
+            temp_of_half_day={this.state.temp_day}
+            sunset={this.state.sunset}
+            sunrise={this.state.sunrise}
+            wind={this.state.wind}
+            weather={this.state.weather}
+            weather_icon={this.state.weather_icon}
+          />
+        </div>
       </div>
     );
   }

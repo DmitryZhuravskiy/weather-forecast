@@ -433,3 +433,12 @@ code {
   display: block;
   margin-left: 25px;
 }
+
+.data__near-day {
+  width: 95px;
+  height: 101px; 
+  background: #FFFFFF;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-sizing: border-box;
+}

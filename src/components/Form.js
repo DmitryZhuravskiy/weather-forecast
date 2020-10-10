@@ -4,7 +4,7 @@ class Form extends React.Component {
   render() {
     return (
       <div className="main">
-        <section class="location">
+        <section className="location">
           <div className="graphic location-graphic">
             <img src="./images/graphic-location.svg" alt="main image" />
           </div>
