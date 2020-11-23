@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/forecast-weather/static/css/main.30eb48ba.chunk.css",
-    "main.js": "/forecast-weather/static/js/main.dec30189.chunk.js",
-    "main.js.map": "/forecast-weather/static/js/main.dec30189.chunk.js.map",
-    "runtime-main.js": "/forecast-weather/static/js/runtime-main.b4efb9d2.js",
-    "runtime-main.js.map": "/forecast-weather/static/js/runtime-main.b4efb9d2.js.map",
-    "static/js/2.6c1ff8e3.chunk.js": "/forecast-weather/static/js/2.6c1ff8e3.chunk.js",
-    "static/js/2.6c1ff8e3.chunk.js.map": "/forecast-weather/static/js/2.6c1ff8e3.chunk.js.map",
+    "main.js": "/forecast-weather/static/js/main.ad07f300.chunk.js",
+    "main.js.map": "/forecast-weather/static/js/main.ad07f300.chunk.js.map",
+    "runtime-main.js": "/forecast-weather/static/js/runtime-main.5fa1c3fd.js",
+    "runtime-main.js.map": "/forecast-weather/static/js/runtime-main.5fa1c3fd.js.map",
+    "static/js/2.0572cd68.chunk.js": "/forecast-weather/static/js/2.0572cd68.chunk.js",
+    "static/js/2.0572cd68.chunk.js.map": "/forecast-weather/static/js/2.0572cd68.chunk.js.map",
     "index.html": "/forecast-weather/index.html",
-    "precache-manifest.359bc5981173ef62b5fba20f58f3e65f.js": "/forecast-weather/precache-manifest.359bc5981173ef62b5fba20f58f3e65f.js",
+    "precache-manifest.297acada691fa9b653a1517367de0351.js": "/forecast-weather/precache-manifest.297acada691fa9b653a1517367de0351.js",
     "service-worker.js": "/forecast-weather/service-worker.js",
     "static/css/main.30eb48ba.chunk.css.map": "/forecast-weather/static/css/main.30eb48ba.chunk.css.map",
-    "static/js/2.6c1ff8e3.chunk.js.LICENSE.txt": "/forecast-weather/static/js/2.6c1ff8e3.chunk.js.LICENSE.txt",
+    "static/js/2.0572cd68.chunk.js.LICENSE.txt": "/forecast-weather/static/js/2.0572cd68.chunk.js.LICENSE.txt",
     "static/media/index.css": "/forecast-weather/static/media/search-town.2ef4cc1f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b4efb9d2.js",
-    "static/js/2.6c1ff8e3.chunk.js",
+    "static/js/runtime-main.5fa1c3fd.js",
+    "static/js/2.0572cd68.chunk.js",
     "static/css/main.30eb48ba.chunk.css",
-    "static/js/main.dec30189.chunk.js"
+    "static/js/main.ad07f300.chunk.js"
   ]
 }
