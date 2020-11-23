@@ -209,7 +209,11 @@ code {
 }
 
 .night-graphic {
-  background-image: url("./images/graphic-night.svg");
+  background: url("./images/graphic-night.svg");
+}
+
+.day-graphic {
+  background: url("./images/graphic-day.svg");
 }
 
 .night {
@@ -394,6 +398,8 @@ code {
 
 .item__image {
   display: block;
+  width: 5px;
+  height: 8px;
   margin: 0 auto;
   margin-bottom: 12px;
 }
@@ -432,4 +438,13 @@ code {
 .day-main .weather__text {
   display: block;
   margin-left: 25px;
+}
+
+.data__near-day {
+  width: 95px;
+  height: 101px; 
+  background: #FFFFFF;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-sizing: border-box;
 }
