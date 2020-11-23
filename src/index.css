@@ -209,7 +209,11 @@ code {
 }
 
 .night-graphic {
-  background-image: url("./images/graphic-night.svg");
+  background: url("./images/graphic-night.svg");
+}
+
+.day-graphic {
+  background: url("./images/graphic-day.svg");
 }
 
 .night {

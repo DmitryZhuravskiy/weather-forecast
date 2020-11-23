@@ -329,7 +329,7 @@ class App extends React.Component {
             date_now={this.state.date_now_night}
             error={this.state.error}
             humidity={this.state.humidity_night}
-            picture={"./images/graphic-night.svg"}
+            picture={'night-graphic'}
             pressure={this.state.pressure_night}
             temp={this.state.temp}
             temp_min={this.state.temp_min}
@@ -360,7 +360,7 @@ class App extends React.Component {
             date_now={this.state.date_now}
             error={this.state.error}
             humidity={this.state.humidity}
-            picture={"./images/graphic-day.svg"}
+            picture={'night-graphic day-graphic'}
             pressure={this.state.pressure}
             temp={this.state.temp}
             temp_min={this.state.temp_min}

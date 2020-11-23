@@ -1,12 +1,14 @@
 import React from "react";
 
+import GraphicLocation from './../images/graphic-location.svg'
+
 class Locations extends React.Component {
   render() {
     return (
       <div className="main">
         <section className="location">
           <div className="graphic location-graphic">
-            <img src="./images/graphic-location.svg" alt="main image" />
+            <img src={GraphicLocation} alt="main image" />
           </div>
           <div className="location-data">
             <h2 className="location-data__title">Location</h2>
