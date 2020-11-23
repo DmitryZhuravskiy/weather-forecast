@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/weather-forecast/static/css/main.d3dc427f.chunk.css",
-    "main.js": "/weather-forecast/static/js/main.dec30189.chunk.js",
-    "main.js.map": "/weather-forecast/static/js/main.dec30189.chunk.js.map",
+    "main.css": "/weather-forecast/static/css/main.c483930f.chunk.css",
+    "main.js": "/weather-forecast/static/js/main.68ed8556.chunk.js",
+    "main.js.map": "/weather-forecast/static/js/main.68ed8556.chunk.js.map",
     "runtime-main.js": "/weather-forecast/static/js/runtime-main.d4e096a0.js",
     "runtime-main.js.map": "/weather-forecast/static/js/runtime-main.d4e096a0.js.map",
-    "static/js/2.6c1ff8e3.chunk.js": "/weather-forecast/static/js/2.6c1ff8e3.chunk.js",
-    "static/js/2.6c1ff8e3.chunk.js.map": "/weather-forecast/static/js/2.6c1ff8e3.chunk.js.map",
+    "static/js/2.9b98cd34.chunk.js": "/weather-forecast/static/js/2.9b98cd34.chunk.js",
+    "static/js/2.9b98cd34.chunk.js.map": "/weather-forecast/static/js/2.9b98cd34.chunk.js.map",
     "index.html": "/weather-forecast/index.html",
-    "precache-manifest.a99cd908f4908e830265ac57c5df9d93.js": "/weather-forecast/precache-manifest.a99cd908f4908e830265ac57c5df9d93.js",
+    "precache-manifest.5d558ebeafd0547bd146a092dae2972d.js": "/weather-forecast/precache-manifest.5d558ebeafd0547bd146a092dae2972d.js",
     "service-worker.js": "/weather-forecast/service-worker.js",
-    "static/css/main.d3dc427f.chunk.css.map": "/weather-forecast/static/css/main.d3dc427f.chunk.css.map",
-    "static/js/2.6c1ff8e3.chunk.js.LICENSE.txt": "/weather-forecast/static/js/2.6c1ff8e3.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/weather-forecast/static/media/search-town.2ef4cc1f.svg"
+    "static/css/main.c483930f.chunk.css.map": "/weather-forecast/static/css/main.c483930f.chunk.css.map",
+    "static/js/2.9b98cd34.chunk.js.LICENSE.txt": "/weather-forecast/static/js/2.9b98cd34.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/weather-forecast/static/media/search-town.2ef4cc1f.svg",
+    "static/media/graphic-location.svg": "/weather-forecast/static/media/graphic-location.1f67c180.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d4e096a0.js",
-    "static/js/2.6c1ff8e3.chunk.js",
-    "static/css/main.d3dc427f.chunk.css",
-    "static/js/main.dec30189.chunk.js"
+    "static/js/2.9b98cd34.chunk.js",
+    "static/css/main.c483930f.chunk.css",
+    "static/js/main.68ed8556.chunk.js"
   ]
 }
