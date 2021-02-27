@@ -2,7 +2,7 @@
 
 Презентационная версия - https://dmitryzhuravskiy.github.io/weather-forecast/,
 
-а также запасная - https://dmitryzhuravskiy.github.io/search-weather/
+запасная - https://dmitryzhuravskiy.github.io/search-weather/
 
 Это React-приложения для получения данных о погоде по названию города. Сделано по макету от тестового задания. Данные подгружаются с openweathermap.org/api. 
 
