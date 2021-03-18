@@ -15,11 +15,13 @@
 Скриншот №1. Добавление в список, удаление и при клике получение подробной информации (на скриншотах #2 и #3)
 <br />
 <br />
-
+<br />
+<br />
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--2.jpg" margin-left="50px"/>
 Скриншот №2. Данные о погоде с упором на темное время суток
 <br />
+<br /><br />
 <br />
 
 
