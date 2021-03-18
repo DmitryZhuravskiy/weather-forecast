@@ -12,7 +12,7 @@
 
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast.jpg" style="margin: 0 auto; display: block;"/>
-<span font-weight>Скриншот №1</span> Добавление в список, удаление и при клике получение подробной информации (на скриншотах #2 и #3)
+<span style="display: block; font-weight: bold;">Скриншот №1</span> Добавление в список, удаление и при клике получение подробной информации (на скриншотах #2 и #3)
 <br />
 <br />
 <br />
