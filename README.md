@@ -11,13 +11,13 @@
 Приложение сделано на основе create-react-app. Никаких других расширений, например Redux, Router, Reselect, нет. Вполне достаточно запустить npx create-react-app my-app и заменить папки src и public на папки из этого репозитория и все будет работать. Пощелкать можно в презентационной версии, у меня работает, но, может быть, возникнут проблемы из-за localStorage, поэтому я оставил две ссылки на разные реализации этого проекта, чтобы уж наверняка.
 
 
-<img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast.jpg" margin="auto" display="block"/>
+<img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast.jpg" margin-left="50px" display="block"/>
 Скриншот №1. Добавление в список, удаление и при клике получение подробной информации (на скриншотах #2 и #3)
 <br />
 <br />
 
 
-<img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--2.jpg" margin="auto"/>
+<img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--2.jpg" margin-left="50px"/>
 Скриншот №2. Данные о погоде с упором на темное время суток
 <br />
 <br />
