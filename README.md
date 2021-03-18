@@ -13,13 +13,14 @@
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast.jpg" margin="auto"/>
 Скриншот №1. Добавление в список, удаление и при клике получение подробной информации (на скриншотах #2 и #3)
-<div>
-  </div>
+<br />
+<br />
 
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--2.jpg" margin="auto"/>
 Скриншот №2. Данные о погоде с упором на темное время суток
-
+<br />
+<br />
 
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--3.jpg" margin="auto"/>
