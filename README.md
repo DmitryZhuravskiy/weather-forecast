@@ -15,4 +15,8 @@
 
 	
 
-<img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/graphic-day.svg" width="200" height="50"/>
+<img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast.jpg.jpg" margin="0 auto"/>
+
+<img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--2.jpg.jpg" margin="0 auto"/>
+
+<img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--3.jpg.jpg" margin="0 auto"/>
