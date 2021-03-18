@@ -12,18 +12,12 @@
 
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast.jpg" style="margin: 0 auto; display: block;"/>
-<b>Скриншот №1.</b> Добавление в список, удаление и при клике получение подробной информации (на скриншотах 2 и 3)
-<br />
-<br />
-<br />
-<br />
+<b>Добавление в список, удаление и при клике получение подробной информации (на скриншотах 2 и 3)</b>
+<br /><br /><br />
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--2.jpg" margin-left="50px"/>
-<b>Скриншот №2.</b> Данные о погоде с упором на темное время суток
-<br />
-<br /><br />
-<br />
-
+<b>Данные о погоде за темное время суток</b>
+<br /><br /><br />
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--3.jpg" margin="auto"/>
-<b>Скриншот №3.</b> Данные о погоде в светлое время суток
+<b>Данные о погоде в светлое время суток</b>
