@@ -12,7 +12,7 @@
 
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast.jpg" style="margin: 0 auto; display: block;"/>
-<b>Добавление в список, удаление и при клике получение подробной информации (на скриншотах 2 и 3)</b>
+<b>Добавление в список, удаление и при клике получение подробной информации (ниже)</b>
 <br /><br /><br />
 
 <img src="https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/weather-forecast--2.jpg" margin-left="50px"/>
