@@ -10,4 +10,4 @@
 
 Приложение сделано на основе create-react-app. Никаких других расширений, например Redux, Router, Reselect, нет. Вполне достаточно запустить npx create-react-app my-app и заменить папки src и public на папки из этого репозитория и все будет работать. Пощелкать можно в презентационной версии, у меня работает, но, может быть, возникнут проблемы из-за localStorage, поэтому я оставил две ссылки на разные реализации этого проекта, чтобы уж наверняка.
 
-![Image of weather-forecast](https://github.com/DmitryZhuravskiy/weather-forecast/tree/main/public/images/graphic-day.svg)
+![Image alt](https://github.com/DmitryZhuravskiy/weather-forecast/raw/main/public/images/graphic-day.svg)
