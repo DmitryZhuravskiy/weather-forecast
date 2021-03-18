@@ -23,7 +23,7 @@ class Locations extends React.Component {
                 name="city"
               />
               <button className="search-town__input-submit" type="submit">
-                Добавить город
+                Add town to list
               </button>
             </form>
             <ul className="location__list">
