@@ -1,15 +1,17 @@
 "# Weather-Forecast" 
 
 Презентационная версия - https://dmitryzhuravskiy.github.io/weather-forecast/,
-
 запасная - https://dmitryzhuravskiy.github.io/search-weather/
 
-Руководство по запуску:
+
+<b>Руководство по запуску:</b>
 1. git clone https://github.com/DmitryZhuravskiy/weather-forecast.git - копируем репозиторий;
 2. cd ./weather-forecast - переходим в папку с локальной версией;
 3. npm install - устанавливаем зависимости;
 4. npm start - для просмотра локальной версии в браузере по адресу http://localhost:3000/ ;
 5. или npm run build для сборки проекта;
+
+
 
 Это React-приложения для получения данных о погоде по названию города. Сделано по макету от тестового задания. Данные подгружаются с openweathermap.org/api. 
 
