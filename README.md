@@ -5,7 +5,7 @@
 запасная - https://dmitryzhuravskiy.github.io/search-weather/
 <br /><br />
 
-<h2><b>Руководство по запуску:</b></h2>
+<h2><b>Руководство по запуску</b></h2>
 1. git clone https://github.com/DmitryZhuravskiy/weather-forecast.git - копируем репозиторий;<br />
 2. cd ./weather-forecast - переходим в папку с локальной версией;<br />
 3. npm install - устанавливаем зависимости;<br />
