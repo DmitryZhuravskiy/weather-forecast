@@ -1,4 +1,4 @@
-"# Weather-Forecast" 
+<b style={font-weight: 30px}>Weather-Forecast<b>
 
 Презентационная версия - https://dmitryzhuravskiy.github.io/weather-forecast/,
 
