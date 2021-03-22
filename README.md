@@ -1,4 +1,4 @@
-<b style="font-weight: 30px">Weather-Forecast</b>
+<b style="color: blue; font-size: 12px; font-family: Arial">Weather-Forecast</b>
 
 Презентационная версия - https://dmitryzhuravskiy.github.io/weather-forecast/,
 
