@@ -2,7 +2,7 @@
 
 Презентационная версия - https://dmitryzhuravskiy.github.io/weather-forecast/,
 
-запасная - https://dmitryzhuravskiy.github.io/search-weather/ ; п
+запасная - https://dmitryzhuravskiy.github.io/search-weather/ ;
 <br /><br />
 
 <h2><b>Руководство по запуску</b></h2>
